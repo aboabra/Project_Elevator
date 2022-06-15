@@ -21,6 +21,12 @@
 "plantilla_ii2\tim_1.o"
 "plantilla_ii2\stm32f4xx_it_1.o"
 "plantilla_ii2\stm32f4xx_hal_msp_1.o"
+"plantilla_ii2\button.o"
+"plantilla_ii2\floor.o"
+"plantilla_ii2\led.o"
+"plantilla_ii2\lift.o"
+"plantilla_ii2\motor.o"
+"plantilla_ii2\timer.o"
 "plantilla_ii2\retarget_io.o"
 --library_type=microlib --strict --scatter "Plantilla_II2\Plantilla_II2.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols

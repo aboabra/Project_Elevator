@@ -832,6 +832,66 @@
                 </FileArmAds>
               </FileOption>
             </File>
+            <File>
+              <FileName>floor.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Core\Inc\floor.h</FilePath>
+            </File>
+            <File>
+              <FileName>led.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Core\Inc\led.h</FilePath>
+            </File>
+            <File>
+              <FileName>motor.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Core\Inc\motor.h</FilePath>
+            </File>
+            <File>
+              <FileName>timer.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Core\Inc\timer.h</FilePath>
+            </File>
+            <File>
+              <FileName>button.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Core\Inc\button.h</FilePath>
+            </File>
+            <File>
+              <FileName>button.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Core\Src\button.c</FilePath>
+            </File>
+            <File>
+              <FileName>floor.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Core\Src\floor.c</FilePath>
+            </File>
+            <File>
+              <FileName>led.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Core\Src\led.c</FilePath>
+            </File>
+            <File>
+              <FileName>lift.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Core\Src\lift.c</FilePath>
+            </File>
+            <File>
+              <FileName>motor.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Core\Src\motor.c</FilePath>
+            </File>
+            <File>
+              <FileName>timer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Core\Src\timer.c</FilePath>
+            </File>
+            <File>
+              <FileName>lift.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Core\Inc\lift.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
