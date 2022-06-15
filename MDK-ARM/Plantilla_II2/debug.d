@@ -1,4 +1,4 @@
-plantilla_ii2/debug.o: ..\Core\Src\debug.c \
+plantilla_ii2/debug.o: ..\Src\debug.c \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdio.h \
   ..\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f407xx.h \
   ..\Drivers\CMSIS\Include\core_cm4.h \
