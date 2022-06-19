@@ -2,16 +2,18 @@
 
 void HAL_SYSTICK_Callback(void)
 {
-   volatile uint32_t uwTick = HAL_GetTick();
+    volatile uint32_t uwTick = HAL_GetTick();
+    currentms=uwTick;
     
-
     /* FLAGS FOR PWM OF MOTOR MOVEMENT*/
-
+    if(ESTADOS==LIFTUP||ESTADOS==LIFTDN){
 	if(!FLAGS.PWMMMovementON && !(uwTick % MMOVEMENTON) && (uwTick % MMOVEMENTOFF) )
 		FLAGS.PWMMMovementON = FLAG_SET;
+        
 	if(!FLAGS.PWMMMovementOFF && !((uwTick % MMOVEMENTOFF)))
 		FLAGS.PWMMMovementOFF = FLAG_SET;
-    
+    }
+
     /* FLAGS FOR PWM OF MOTOR DIRECTION*/
     /* DOWN */
     if(!FLAGS.PWMMDirectionDNON && !(uwTick % MDIRECTIONDOWN) && (uwTick % MDIRECTIONOFF) )
@@ -24,4 +26,9 @@ void HAL_SYSTICK_Callback(void)
 		FLAGS.PWMMDirectionDNON = FLAG_SET;
     if(!FLAGS.PWMMDirectionDNOFF && !((uwTick % MDIRECTIONOFF)))
 		FLAGS.PWMMDirectionDNOFF  = FLAG_SET;
+}
+
+void ServoON(void){
+    
+
 }

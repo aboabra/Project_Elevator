@@ -55,8 +55,11 @@ void SystemClock_Config(void);
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 AUX_FLAGS FLAGS = {0};
-volatile int8_t position;
-/* USER CODE END 0 */
+volatile int8_t position=0;
+volatile uint32_t timeStartMotor=0;
+volatile uint32_t currentms = 0 ;
+STATE ESTADOS;
+    /* USER CODE END 0 */
 
 /**
   * @brief  The application entry point.
@@ -75,8 +78,11 @@ int main(void)
 
   /* USER CODE BEGIN Init */
   LED_Init();
-    
-    
+  liftInit();
+  BLUELEDON;
+  REDLEDON;
+  GREENLEDON;
+  ORANGELEDON;
   /* USER CODE END Init */
 
   /* Configure the system clock */
@@ -96,6 +102,7 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+      LED_Update();
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

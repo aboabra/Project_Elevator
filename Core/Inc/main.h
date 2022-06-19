@@ -54,8 +54,15 @@ extern "C" {
 	uint8_t PWMMDirectionUPOFF;
 } AUX_FLAGS;
    extern AUX_FLAGS FLAGS;
+    typedef enum {
+    DOWN,
+    LIFTUP,
+    UP,
+    LIFTDN} STATE;
+   extern STATE ESTADOS; 
    extern volatile int8_t position;
-
+   extern volatile uint32_t timeStartMotor;
+   extern volatile uint32_t currentms ;
 /* USER CODE END ET */
 
 /* Exported constants --------------------------------------------------------*/

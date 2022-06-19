@@ -8,3 +8,12 @@
 #define MDIRECTIONDOWN 250
 #define MDIRECTIONUP 750
 #define MDIRECTIONOFF 1000
+
+/* LIMITS FOR PWM OF SERVO*/
+#define SERVO0ON 10
+#define SERVO0OFF 20
+#define SERVO180ON 20
+#define SERVO180OFF 40
+
+/*Functions*/
+void ServoON(void);
