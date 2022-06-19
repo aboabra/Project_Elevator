@@ -29,6 +29,14 @@ extern "C" {
 
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f4xx_hal.h"
+#include "stdint.h"
+#include "stdlib.h"
+#include "led.h"
+#include "timer.h"
+#include "floor.h"
+#include "lift.h"
+#include "motor.h"
+#include "button.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -37,6 +45,16 @@ extern "C" {
 
 /* Exported types ------------------------------------------------------------*/
 /* USER CODE BEGIN ET */
+   typedef struct {
+	uint8_t PWMMMovementON;
+    uint8_t PWMMMovementOFF;
+	uint8_t PWMMDirectionDNON;
+	uint8_t PWMMDirectionDNOFF;
+    uint8_t PWMMDirectionUPON;
+	uint8_t PWMMDirectionUPOFF;
+} AUX_FLAGS;
+   extern AUX_FLAGS FLAGS;
+   extern volatile int8_t position;
 
 /* USER CODE END ET */
 
@@ -75,7 +93,8 @@ void Error_Handler(void);
 #define SWO_Pin GPIO_PIN_3
 #define SWO_GPIO_Port GPIOB
 /* USER CODE BEGIN Private defines */
-
+#define FLAG_RESET 0U
+#define FLAG_SET !FLAG_RESET 
 /* USER CODE END Private defines */
 
 #ifdef __cplusplus

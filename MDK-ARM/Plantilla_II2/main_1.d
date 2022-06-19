@@ -30,4 +30,7 @@ plantilla_ii2/main_1.o: ..\Core\Src\main.c ..\Core\Inc\main.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pwr_ex.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim_ex.h \
-  ..\Core\Inc\tim.h ..\Core\Inc\main.h ..\Core\Inc\gpio.h
+  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdlib.h ..\Core\Inc\led.h \
+  ..\Core\Inc\timer.h ..\Core\Inc\main.h ..\Core\Inc\floor.h \
+  ..\Core\Inc\lift.h ..\Core\Inc\motor.h ..\Core\Inc\button.h \
+  ..\Core\Inc\tim.h ..\Core\Inc\gpio.h

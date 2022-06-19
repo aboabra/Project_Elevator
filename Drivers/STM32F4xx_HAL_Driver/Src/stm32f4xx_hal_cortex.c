@@ -451,7 +451,7 @@ uint32_t HAL_NVIC_GetActive(IRQn_Type IRQn)
   *             @arg SYSTICK_CLKSOURCE_HCLK: AHB clock selected as SysTick clock source.
   * @retval None
   */
-void HAL_SYSTICK_CLKSourceConfig(uint32_t CLKSource)
+void HAL_SYSTICK_CLKSourceConfig(uint32_t CLKSource) 
 {
   /* Check the parameters */
   assert_param(IS_SYSTICK_CLK_SOURCE(CLKSource));

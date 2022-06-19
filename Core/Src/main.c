@@ -55,7 +55,8 @@ void SystemClock_Config(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-
+AUX_FLAGS FLAGS = {0};
+volatile int8_t position;
 /* USER CODE END 0 */
 
 /**
@@ -74,7 +75,9 @@ int main(void)
   HAL_Init();
 
   /* USER CODE BEGIN Init */
-
+  LED_Init();
+    
+    
   /* USER CODE END Init */
 
   /* Configure the system clock */
