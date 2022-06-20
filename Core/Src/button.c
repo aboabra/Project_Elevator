@@ -6,9 +6,9 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin){
     ESTADOS = LIFTUP;
     position=-1;
     }
-    if(position==-1)
     if(position==1){
     timeStartMotor=currentms;
     ESTADOS = LIFTDN;
+    position=-1;
     }
 }

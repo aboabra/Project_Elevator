@@ -25,15 +25,19 @@ void LED_Update(void){
         FLAGS.PWMMMovementOFF = FLAG_RESET;
         }
     }
+    
     }
     /*LIFT POSITION*/
     else if(ESTADOS==LIFTUP){
         ESTADOS=UP;
+        liftUp();
         GREENLEDON;
         BLUELEDOFF;
+        
     }
     else if(ESTADOS==LIFTDN){
         ESTADOS=DOWN;
+        liftDown();
         GREENLEDOFF;
         BLUELEDON;
     }
@@ -61,6 +65,7 @@ void LED_Update(void){
     ORANGELEDON;
     FLAGS.PWMMDirectionUPOFF = FLAG_RESET;
     }
+    
 }
 }
 }

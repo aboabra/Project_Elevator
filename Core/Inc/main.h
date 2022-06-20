@@ -59,8 +59,9 @@ extern "C" {
     LIFTUP,
     UP,
     LIFTDN} STATE;
+    
    extern STATE ESTADOS; 
-   extern volatile int8_t position;
+   extern volatile int position;
    extern volatile uint32_t timeStartMotor;
    extern volatile uint32_t currentms ;
 /* USER CODE END ET */

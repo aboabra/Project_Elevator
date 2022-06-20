@@ -9,21 +9,31 @@ void liftInit(void){
     HAL_GPIO_Init(GPIOD, &port);
 }
 void liftUp(void){
-    if(FLAGS.PWMMMovementON==FLAG_SET){
+    /*if(FLAGS.PWMMMovementON==FLAG_SET){
     REDLEDOFF;
     FLAGS.PWMMMovementON = FLAG_RESET;
     }
     if(FLAGS.PWMMMovementOFF==FLAG_SET){
     REDLEDON;
-    FLAGS.PWMMMovementOFF = FLAG_RESET;
-    }
-    position=-1;
+    FLAGS.PWMMMovementOFF = FLAG_RESET;*/
+    //}
+    position=1;
+    ESTADOS=UP;
+    
 }
 void liftDown(void){
     
-    position=-1;
+    position=0;
 
 }
 volatile uint8_t liftIsMoving(void){
-    return position;
+    uint8_t moving;
+    if(position==-1)
+    {
+        moving=1;
+    }
+    else{
+        moving=0;
+    }
+        return moving;
 }

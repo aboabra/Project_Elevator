@@ -55,7 +55,7 @@ void SystemClock_Config(void);
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 AUX_FLAGS FLAGS = {0};
-volatile int8_t position=0;
+volatile int position=0;
 volatile uint32_t timeStartMotor=0;
 volatile uint32_t currentms = 0 ;
 STATE ESTADOS;
@@ -77,12 +77,7 @@ int main(void)
   HAL_Init();
 
   /* USER CODE BEGIN Init */
-  LED_Init();
-  liftInit();
-  BLUELEDON;
-  REDLEDON;
-  GREENLEDON;
-  ORANGELEDON;
+  
   /* USER CODE END Init */
 
   /* Configure the system clock */
@@ -95,7 +90,12 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   /* USER CODE BEGIN 2 */
-
+  LED_Init();
+  liftInit();
+  BLUELEDON;
+  REDLEDON;
+  GREENLEDON;
+  ORANGELEDON;
   /* USER CODE END 2 */
 
   /* Infinite loop */

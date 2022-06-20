@@ -17,3 +17,4 @@
 
 /*Functions*/
 void ServoON(void);
+void setFlag(void);
