@@ -93,6 +93,7 @@ int main(void)
   /* USER CODE BEGIN 2 */
   LED_Init();
   liftInit();
+  motorInit();
   BLUELEDON;
   REDLEDON;
   GREENLEDON;
@@ -106,6 +107,7 @@ int main(void)
   {
       LED_Update();
       lift_Update();
+      motor_Update();
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
