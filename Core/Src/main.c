@@ -104,6 +104,7 @@ int main(void)
   while (1)
   {
       LED_Update();
+      lift_Update();
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

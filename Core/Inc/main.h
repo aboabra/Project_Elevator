@@ -52,6 +52,15 @@ extern "C" {
 	uint8_t PWMMDirectionDNOFF;
     uint8_t PWMMDirectionUPON;
 	uint8_t PWMMDirectionUPOFF;
+	uint8_t PWMSERVO0ON1;
+    uint8_t PWMSERVO0OFF1;
+	uint8_t PWMSERVO180ON1;
+    uint8_t PWMSERVO180OFF1;
+	uint8_t PWMSERVO0ON2;
+    uint8_t PWMSERVO0OFF2;
+	uint8_t PWMSERVO180ON2;
+    uint8_t PWMSERVO180OFF2;
+
 } AUX_FLAGS;
    extern AUX_FLAGS FLAGS;
     typedef enum {

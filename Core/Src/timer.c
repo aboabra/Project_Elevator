@@ -38,9 +38,47 @@ void setFlag(void){
 		FLAGS.PWMMDirectionUPOFF  = FLAG_SET;
     }
 }
+    /*DOOR OPENS*/
+    if(ESTADOS==DOWN){
+    if(!FLAGS.PWMSERVO0ON1 && !(ticks % SERVO0ON) && (ticks % SERVO0OFF))
+    {
+		FLAGS.PWMSERVO0ON1 = FLAG_SET;
+    }
+    if(!FLAGS.PWMSERVO0OFF1 && !((ticks % SERVO0OFF)))
+    {
+		FLAGS.PWMSERVO0OFF1  = FLAG_SET;
+    }
+    }
+    if(ESTADOS==UP){
+    if(!FLAGS.PWMSERVO0ON2 && !(ticks % SERVO0ON) && (ticks % SERVO0OFF))
+    {
+		FLAGS.PWMSERVO0ON2 = FLAG_SET;
+    }
+    if(!FLAGS.PWMSERVO0OFF2 && !((ticks % SERVO0OFF)))
+    {
+		FLAGS.PWMSERVO0OFF2  = FLAG_SET;
+    }
 }
-
-void ServoON(void){
+    /*DOOR CLOSES*/
+    if(ESTADOS==LIFTUP){
+    if(!FLAGS.PWMSERVO180ON1 && !(ticks % SERVO180ON) && (ticks % SERVO180OFF))
+    {
+		FLAGS.PWMSERVO180ON1 = FLAG_SET;
+    }
+    if(!FLAGS.PWMSERVO180OFF1 && !((ticks % SERVO180OFF)))
+    {
+		FLAGS.PWMSERVO180OFF1  = FLAG_SET;
+    }
+    }
+    if(ESTADOS==LIFTDN){
+    if(!FLAGS.PWMSERVO180ON2 && !(ticks % SERVO180ON) && (ticks % SERVO180OFF))
+    {
+		FLAGS.PWMSERVO180ON2 = FLAG_SET;
+    }
+    if(!FLAGS.PWMSERVO180OFF2 && !((ticks % SERVO180OFF)))
+    {
+		FLAGS.PWMSERVO180OFF2  = FLAG_SET;
+    }
+    }
     
-
 }

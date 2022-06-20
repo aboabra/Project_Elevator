@@ -9,21 +9,11 @@ void liftInit(void){
     HAL_GPIO_Init(GPIOD, &port);
 }
 void liftUp(void){
-    /*if(FLAGS.PWMMMovementON==FLAG_SET){
-    REDLEDOFF;
-    FLAGS.PWMMMovementON = FLAG_RESET;
-    }
-    if(FLAGS.PWMMMovementOFF==FLAG_SET){
-    REDLEDON;
-    FLAGS.PWMMMovementOFF = FLAG_RESET;*/
-    //}
-    position=1;
-    ESTADOS=UP;
+     position=1;
     
 }
 void liftDown(void){
-    
-    position=0;
+     position=0;
 
 }
 volatile uint8_t liftIsMoving(void){
@@ -35,5 +25,49 @@ volatile uint8_t liftIsMoving(void){
     else{
         moving=0;
     }
-        return moving;
+    return moving;
 }
+void lift_Update(void){
+    if(ESTADOS==DOWN){
+        if(FLAGS.PWMSERVO0ON1==FLAG_SET){
+        SERVO1ON;
+        FLAGS.PWMSERVO0ON1 = FLAG_RESET;
+        }
+        else if(FLAGS.PWMSERVO0OFF1==FLAG_SET){
+        SERVO1OFF;
+        FLAGS.PWMSERVO0OFF1 = FLAG_RESET;
+        }
+    }
+    else if(ESTADOS==UP){
+        if(FLAGS.PWMSERVO0ON2==FLAG_SET){
+        SERVO2ON;
+        FLAGS.PWMSERVO0ON2 = FLAG_RESET;
+        }
+        else if(FLAGS.PWMSERVO0OFF2==FLAG_SET){
+        SERVO2OFF;
+        FLAGS.PWMSERVO0OFF2 = FLAG_RESET;
+        }
+    }
+    else if(ESTADOS==LIFTUP){
+        if(FLAGS.PWMSERVO180ON1==FLAG_SET){
+        SERVO1ON;
+        FLAGS.PWMSERVO180ON1 = FLAG_RESET;
+        }
+        else if(FLAGS.PWMSERVO180OFF1==FLAG_SET){
+        SERVO1OFF;
+        FLAGS.PWMSERVO180OFF1 = FLAG_RESET;
+        }
+    }
+     else if(ESTADOS==LIFTDN){
+        if(FLAGS.PWMSERVO180ON2==FLAG_SET){
+        SERVO2ON;
+        FLAGS.PWMSERVO180ON2 = FLAG_RESET;
+        }
+        else if(FLAGS.PWMSERVO180OFF2==FLAG_SET){
+        SERVO2OFF;
+        FLAGS.PWMSERVO180OFF2 = FLAG_RESET;
+        }
+    }
+
+}
+
