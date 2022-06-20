@@ -60,6 +60,8 @@ extern "C" {
     uint8_t PWMSERVO0OFF2;
 	uint8_t PWMSERVO180ON2;
     uint8_t PWMSERVO180OFF2;
+    uint8_t MOTOR;
+
 
 } AUX_FLAGS;
    extern AUX_FLAGS FLAGS;

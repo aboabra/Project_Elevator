@@ -97,6 +97,7 @@ int main(void)
   REDLEDON;
   GREENLEDON;
   ORANGELEDON;
+  HAL_SYSTICK_Config(SystemCoreClock/1000);
   /* USER CODE END 2 */
 
   /* Infinite loop */

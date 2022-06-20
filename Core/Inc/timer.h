@@ -16,7 +16,8 @@
 #define SERVO0OFF 20
 #define SERVO180ON 20
 #define SERVO180OFF 40
-
+/* MOTOR COUNTER */
+#define MOTORCOUNTER 5
 /*Functions*/
 void ServoON(void);
 void setFlag(void);

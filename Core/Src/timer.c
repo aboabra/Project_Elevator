@@ -81,4 +81,8 @@ void setFlag(void){
     }
     }
     
+    /*Motor Flag*/
+    if(!FLAGS.MOTOR && !(ticks % MOTORCOUNTER)){
+        FLAGS.MOTOR=FLAG_SET;
+    }
 }
