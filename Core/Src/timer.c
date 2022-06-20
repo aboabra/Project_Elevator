@@ -3,38 +3,39 @@
 void setFlag(void){
     volatile uint32_t uwTick = HAL_GetTick();
     currentms=uwTick;
-    
+    ticks+=(currentms-lastuwTick);
+    if(ticks>=1000) ticks=0;
     /* FLAGS FOR PWM OF MOTOR MOVEMENT*/
     if(ESTADOS==LIFTUP||ESTADOS==LIFTDN){
-	if(!FLAGS.PWMMMovementON && !(uwTick % MMOVEMENTON) && (uwTick % MMOVEMENTOFF) )
+	if(!FLAGS.PWMMMovementON && !(ticks % MMOVEMENTON) && (ticks % MMOVEMENTOFF) )
     {
 		FLAGS.PWMMMovementON = FLAG_SET;
     }
-	if(!FLAGS.PWMMMovementOFF && !((uwTick % MMOVEMENTOFF)))
+	if(!FLAGS.PWMMMovementOFF && !((ticks % MMOVEMENTOFF)))
 		FLAGS.PWMMMovementOFF = FLAG_SET;
     }
 
     /* FLAGS FOR PWM OF MOTOR DIRECTION*/
     /* DOWN */
     if(ESTADOS==LIFTDN){
-    if(!FLAGS.PWMMDirectionDNON && !(uwTick % MDIRECTIONDOWN) && (uwTick % MDIRECTIONOFF) )
+    if(!FLAGS.PWMMDirectionDNON && !(ticks % MDIRECTIONDOWN) && (ticks % MDIRECTIONOFF) )
     {
 		FLAGS.PWMMDirectionDNON = FLAG_SET;
     }
-    if(!FLAGS.PWMMDirectionDNOFF && !(uwTick % MDIRECTIONOFF))
+    if(!FLAGS.PWMMDirectionDNOFF && !(ticks % MDIRECTIONOFF))
     {
 		FLAGS.PWMMDirectionDNOFF = FLAG_SET;
     }
 }
     /* UP */
     if(ESTADOS==LIFTUP){
-    if(!FLAGS.PWMMDirectionUPON && !(uwTick % MDIRECTIONUP) && (uwTick % MDIRECTIONOFF))
+    if(!FLAGS.PWMMDirectionUPON && !(ticks % MDIRECTIONUP) && (ticks % MDIRECTIONOFF)&& (ticks % AVOIDERROR1)&& (ticks % AVOIDERROR2))
     {
-		FLAGS.PWMMDirectionDNON = FLAG_SET;
+		FLAGS.PWMMDirectionUPON = FLAG_SET;
     }
-    if(!FLAGS.PWMMDirectionDNOFF && !((uwTick % MDIRECTIONOFF)))
+    if(!FLAGS.PWMMDirectionDNOFF && !((ticks % MDIRECTIONOFF)))
     {
-		FLAGS.PWMMDirectionDNOFF  = FLAG_SET;
+		FLAGS.PWMMDirectionUPOFF  = FLAG_SET;
     }
 }
 }

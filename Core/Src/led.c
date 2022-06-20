@@ -25,7 +25,10 @@ void LED_Update(void){
         FLAGS.PWMMMovementOFF = FLAG_RESET;
         }
     }
-    
+    }
+    else if(ESTADOS==UP||ESTADOS==DOWN){
+        REDLEDOFF;
+        ORANGELEDOFF;
     }
     /*LIFT POSITION*/
     else if(ESTADOS==LIFTUP){

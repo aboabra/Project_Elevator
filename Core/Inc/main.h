@@ -63,7 +63,7 @@ extern "C" {
    extern STATE ESTADOS; 
    extern volatile int position;
    extern volatile uint32_t timeStartMotor;
-   extern volatile uint32_t currentms ;
+   extern volatile uint32_t currentms, ticks, lastuwTick ;
 /* USER CODE END ET */
 
 /* Exported constants --------------------------------------------------------*/

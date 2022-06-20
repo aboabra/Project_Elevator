@@ -186,6 +186,7 @@ void SysTick_Handler(void)
   /* USER CODE BEGIN SysTick_IRQn 0 */
   setFlag();
   /* USER CODE END SysTick_IRQn 0 */
+  lastuwTick=uwTick;
   HAL_IncTick();
   
   /* USER CODE BEGIN SysTick_IRQn 1 */

@@ -57,7 +57,8 @@ void SystemClock_Config(void);
 AUX_FLAGS FLAGS = {0};
 volatile int position=0;
 volatile uint32_t timeStartMotor=0;
-volatile uint32_t currentms = 0 ;
+volatile uint32_t lastuwTick=0;
+volatile uint32_t currentms = 0, ticks = 0 ;
 STATE ESTADOS;
     /* USER CODE END 0 */
 
